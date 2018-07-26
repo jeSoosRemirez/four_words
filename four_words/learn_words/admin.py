@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import FourWords, OneWord
+
+admin.site.register(FourWords)
+admin.site.register(OneWord)
