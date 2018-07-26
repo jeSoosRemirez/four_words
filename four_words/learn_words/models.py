@@ -1,5 +1,11 @@
 from django.db import models
 
+WORD_CHOICES = (
+    (1, 'noun'),
+    (2, 'adjective'),
+    (3, 'adverb'),
+    (4, 'verb'),
+)
 
 class FourWords(models.Model):
 
@@ -13,3 +19,10 @@ class FourWords(models.Model):
         return f'{self.noun} | {self.adjective} | {self.adverb} | {self.verb}'
 
 
+class OneWord(models.Model):
+
+    word = models.CharField(max_length=50)
+    word_type = models.IntegerField(choices=WORD_CHOICES, default=1)
+
+    def __str__(self):
+        return f'{self.word} | {self.word_type}'
