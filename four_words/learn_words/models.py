@@ -7,12 +7,24 @@ WORD_CHOICES = (
     (4, 'verb'),
 )
 
-class FourWords(models.Model):
 
+class FourWords(models.Model):
     noun = models.CharField(max_length=50, blank=True)
+    noun_desription = models.TextField(max_length=230, blank=True)
+    noun_example = models.TextField(max_length=230, blank=True)
+    noun_translate = models.CharField(max_length=50, blank=True)
     adjective = models.CharField(max_length=50, blank=True)
+    adjective_desription = models.TextField(max_length=230, blank=True)
+    adjective_example = models.TextField(max_length=230, blank=True)
+    adjective_translate = models.CharField(max_length=50, blank=True)
     adverb = models.CharField(max_length=50, blank=True)
+    adverb_desription = models.TextField(max_length=230, blank=True)
+    adverb_example = models.TextField(max_length=230, blank=True)
+    adverb_translate = models.CharField(max_length=50, blank=True)
     verb = models.CharField(max_length=50, blank=True)
+    verb_desription = models.TextField(max_length=230, blank=True)
+    verb_example = models.TextField(max_length=230, blank=True)
+    verb_translate = models.CharField(max_length=50, blank=True)
     pub_date = models.DateTimeField('date published')
 
     def __str__(self):
