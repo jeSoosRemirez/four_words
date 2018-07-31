@@ -15,17 +15,16 @@
 <div class="topnav">
     <h1 class="logo">4Words</h1>
     <a class="profile" href="#">Profile</a>
-    <a href="#">Vocabulary</a>
-    <a href="#">Training</a>
-    <a href="#">Help</a>
-    <a href="learn_words/templates/word_info.html">Omae wa mou</a>
+    <a class="vocabulary" href="#">Vocabulary</a>
+    <a class="training" href="#">Training</a>
+    <a class="help" href="#">Help</a>
     <button class="button_add">Add new word</button>
 </div>
 
 {% block content %}
     <div class="row">
         {% for four_word in four_words %}
-            <div class="column">{{ four_words.noun }}</div>
+            <div class="column">Noun</div>
             <div class="column">Adjective</div>
             <div class="column">Adverb</div>
             <div class="column">Verb</div>
