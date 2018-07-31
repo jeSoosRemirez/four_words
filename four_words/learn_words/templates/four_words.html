@@ -2,8 +2,10 @@
 
 {% block content %}
     {% for four_word in four_words %}
-        <p>{{ four_word.noun }}</p>
-
+        <div><li class="column">{{ four_word.noun }}</li></div>
+        <div><li class="column">{{ four_word.adjective }}</li></div>
+        <div><li class="column">{{ four_word.adverb }}</li></div>
+        <div><li class="column">{{ four_word.verb }}</li></div>
         <a href="{% url 'word-info' four_word.id %}">show more</a>
     {% endfor %}
 {% endblock content %}
