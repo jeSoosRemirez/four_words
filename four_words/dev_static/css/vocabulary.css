@@ -32,7 +32,7 @@ body {
     transition-duration: 0.4s;
 }
 
-.topnav a.profile {
+.topnav a.vocabulary {
     background-color: #f4da07;
     color: black;
 }
