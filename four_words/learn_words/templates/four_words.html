@@ -1,0 +1,9 @@
+{% extends 'your_vocabulary.html' %}
+
+{% block content %}
+    {% for four_word in four_words %}
+        <p>{{ four_word.noun }}</p>
+
+        <a href="{% url 'word-info' four_word.id %}">show more</a>
+    {% endfor %}
+{% endblock content %}
