@@ -1,64 +1,64 @@
 body {
 	background-color: #ffffff;
 	padding: 0;
-    margin: 0;
-    font-family: "Trebuchet MS", sans-serif;
+	margin: 0;
+	font-family: "Trebuchet MS", sans-serif;!important;
 }
 
 .logo {
-    color: white;
-    float: left;
-    padding: 2px 5px;
-    margin: 2px 5px;
+	color: white;
+	float: left;
+	padding: 2px 5px;
+	margin: 2px 5px;
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #333;
+	overflow: hidden;
+	background-color: #333;
 }
 
 .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
 }
 
 .topnav a:hover {
-    background-color: #f4da07;
-    color: black;
-    transition-duration: 0.4s;
+	background-color: #f4da07;
+	color: black;
+	transition-duration: 0.4s;
 }
 
 .topnav a.vocabulary {
-    background-color: #f4da07;
-    color: black;
+	background-color: #f4da07;
+	color: black;
 }
 
 .button_add {
-    margin: 2px 5px;
-    background-color: white;
-    color: black;
-    border: 2px #f4da07;
-    text-align: center;
-    padding: 15px;
-    float: right;
+	background-color: white;
+	color: black;
+	border: 2px #f4da07;
+	text-align: center;
+	padding: 15px;
+	float: right;
 }
 
 .button_add:hover {
-    background-color: #f4da07;
-    color: black;
-    transition-duration: 0.4s;
-    border-color: white;
+	background-color: #f4da07;
+	color: black;
+	transition-duration: 0.4s;
+	border-color: white;
 }
 section, footer, header, aside{
 	display: block;
 }
 
 footer{
-	height: 245px;
+	margin: 5px;
+	padding: 5px;
 	font-size:12px;
 	float: bottom;
 }
