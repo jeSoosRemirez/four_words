@@ -37,21 +37,11 @@ body {
 	color: black;
 }
 
-.button_add {
-	background-color: white;
-	color: black;
-	border: 2px #f4da07;
-	text-align: center;
-	padding: 15px;
-	float: right;
+.topnav > .add {
+    float: right;
+    right: 0;
 }
 
-.button_add:hover {
-	background-color: #f4da07;
-	color: black;
-	transition-duration: 0.4s;
-	border-color: white;
-}
 section, footer, header, aside{
 	display: block;
 }
