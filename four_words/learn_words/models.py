@@ -1,5 +1,7 @@
 from django.db import models
 
+from django.contrib.auth.models import User
+
 WORD_CHOICES = (
     (1, 'noun'),
     (2, 'adjective'),
