@@ -1,11 +1,28 @@
 {% extends 'your_vocabulary.html' %}
 
 {% block content %}
-    {% for four_word in four_words %}
-        <div><li class="column">{{ four_word.noun }}</li></div>
-        <div><li class="column">{{ four_word.adjective }}</li></div>
-        <div><li class="column">{{ four_word.adverb }}</li></div>
-        <div><li class="column">{{ four_word.verb }}</li></div>
-        <a href="{% url 'word-info' four_word.id %}">show more</a>
-    {% endfor %}
+    <table>
+        <tr>
+            <th>Nouns</th>
+            <th>Adjectives</th>
+            <th>Adverbs</th>
+            <th>Verbs</th>
+        </tr>
+        {% for four_word in four_words %}
+            <tr>
+                <td class="column">
+                    <a href="{% url 'word-info' four_word.id %}">{{ four_word.noun }}</a>
+                </td>
+                <td class="column">
+                    <a href="{% url 'word-info' four_word.id %}">{{ four_word.adjective }}</a>
+                </td>
+                <td class="column">
+                    <a href="{% url 'word-info' four_word.id %}">{{ four_word.adverb }}</a>
+                </td>
+                <td class="column">
+                    <a href="{% url 'word-info' four_word.id %}">{{ four_word.verb }}</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock content %}
