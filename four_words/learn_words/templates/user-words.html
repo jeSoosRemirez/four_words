@@ -1,0 +1,22 @@
+{% extends 'your_vocabulary.html' %}
+
+{% block content %}
+    {% for word in words  %}
+        <table>
+            <tr>
+                <td class="column">
+                    <a href="{% url 'word-info' word.id %}">{{ word.noun }}</a>
+                </td>
+                <td class="column">
+                    <a href="{% url 'word-info' word.id %}">{{ word.adjective }}</a>
+                </td>
+                <td class="column">
+                    <a href="{% url 'word-info' word.id %}">{{ word.adverb }}</a>
+                </td>
+                <td class="column">
+                    <a href="{% url 'word-info' word.id %}">{{ word.verb }}</a>
+                </td>
+            </tr>
+        </table>
+    {% endfor %}
+{% endblock content %}

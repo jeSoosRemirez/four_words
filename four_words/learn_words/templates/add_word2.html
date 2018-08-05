@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        font-family: "Trebuchet MS", sans-serif;
+    }
+    .search_word {
+        color: black;
+        background-color: white;
+        border-radius: 0;
+        width: 97%;
+        height: 30px;
+        font-size: 30px;
+    }
+
+    .card {
+        z-index: 3;
+        padding: 10px;
+        border: 3px #333333;
+        background-color: #f4da07;
+        width: 50%;
+        height: 80%;
+    }
+    a {
+        text-decoration: none;
+    }
+    button {
+        padding: 10px;
+        border-radius: 0;
+        float: left;
+        width: 25%;
+    }
+    .description{
+        font-size: 20px;
+    }
+    .recomended{
+        font-size: 14px;
+    }
+</style>
+<body>
+<div class="card">
+    <div class="container">
+        <label>
+            <input type="text" class="search_word">
+        </label>
+        <nav class="four_words_card">
+            <button><a href="#">Noun</a></button>
+            <button><a href="#">Adjective</a></button>
+            <button><a href="#">Adverb</a></button>
+            <button><a href="#">Verb</a></button>
+        </nav>
+        <p class="description">Description</p>
+        <p class="example">"Example"</p>
+        <p class="translate">Translate</p>
+        <p>Recomended to learn:</p>
+        <nav class="recomended">
+            <p>AAsssSS</p>
+        </nav>
+    </div>
+</div>
+</body>
+</html>

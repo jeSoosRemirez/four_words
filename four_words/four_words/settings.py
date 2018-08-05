@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # My apps
-    'learn_words'
+    'learn_words',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'four_words.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'four_words',
+        'NAME': 'four_words_two',
         'USER': 'dmytro',
         'PASSWORD': '1111',
         'HOST': 'localhost',
@@ -134,3 +135,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'dev_static'),
 )
+
