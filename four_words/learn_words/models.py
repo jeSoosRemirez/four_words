@@ -28,9 +28,10 @@ class FourWords(models.Model):
     verb_example = models.TextField(max_length=230, blank=True)
     verb_translate = models.CharField(max_length=50, blank=True)
     pub_date = models.DateTimeField('date published')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.noun} | {self.adjective} | {self.adverb} | {self.verb}'
+        return f'{self.noun} | {self.adjective} | {self.adverb} | {self.verb} | {self.author.username}'
 
 
 class OneWord(models.Model):
