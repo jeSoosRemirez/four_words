@@ -167,23 +167,68 @@ footer p.clients:before{
 }
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
 	width: 25%;
 }
 
+td > a {
+	text-decoration: none;
+	color: black;
+
+}
 tr:nth-child(even) {
-    background-color: #dddddd;
+	background-color: #dddddd;
+}
+* {
+	box-sizing: border-box;
+}
+
+form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+}
+
+form.example button {
+	padding: 0 2px;
+	float: right;
+	width: 20%;
+	height: 42px;
+	background: white;
+	color: black;
+	font-size: 17px;
+	border: 1px #333333;
+	border-right: none;
+	cursor: pointer;
+}
+
+form.example button:hover {
+	background: #f4da07;
+	transition-duration: 0.4s;
+
+}
+
+form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+form {
+	float: right;
 }
