@@ -20,16 +20,33 @@
     <a class="vocabulary" href="#">Vocabulary</a>
     <a class="training" href="#">Training</a>
     <a class="help" href="#">Help</a>
-    <button class="button_add">Add new word</button>
+    {% csrf_token %}
+    <form class="example" action="{% url 'four-words' %}" style="margin:auto; max-width:300px" method="GET">
+        <input type="text" placeholder="Search word..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <a href=""><i class="fas fa-plus add"></i></a>
 </div>
 
+
 {% block content %}
+
     <div class="row">
         {% for four_word in four_words %}
-            <div class="column">Noun</div>
-            <div class="column">Adjective</div>
-            <div class="column">Adverb</div>
-            <div class="column">Verb</div>
+            <table>
+                <tr>
+                    <th>Nouns</th>
+                    <th>Adjectives</th>
+                    <th>Adverbs</th>
+                    <th>Verbs</th>
+                </tr>
+                <tr>
+                    <td class="column">{{ four_word.noun }}</td>
+                    <td class="column">{{ four_word.adjective }}</td>
+                    <td class="column">{{ four_word.adverb }}</td>
+                    <td class="column">{{ four_word.verb }}</td>
+                </tr>
+            </table>
         {% endfor %}
     </div>
 {% endblock content %}
