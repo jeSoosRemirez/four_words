@@ -27,10 +27,7 @@ body {
 	color: black;
 	transition-duration: 0.4s;
 }
-.topnav a.vocabulary {
-	background-color: #f4da07;
-	color: black;
-}
+
 .topnav > .add {
     position: relative;
     padding: 20px;
