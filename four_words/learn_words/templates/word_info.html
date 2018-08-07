@@ -33,4 +33,5 @@
             <td class="column">{{ word.verb_translate }}</td>
         </tr>
     </table>
+    <a href="{% url 'four-words-edit' word_id=word.pk %}"><span>Edit</span></a>
 {% endblock content %}
