@@ -23,70 +23,20 @@
 <div class="topnav">
     <h1 class="logo">4Words</h1>
     <a class="profile" href="#">Profile</a>
-    <a class="vocabulary" href="#">Vocabulary</a>
+    <a class="vocabulary" href="{% url 'four-words' %}">Vocabulary</a>
     <a class="training" href="#">Training</a>
     <a class="help" href="#">Help</a>
+    <a class="" href="{% url 'new-word' %}">Add new word</a>
+
     {% csrf_token %}
     <form class="example" action="{% url 'four-words' %}" style="margin:auto; max-width:300px" method="GET">
         <button type="submit"><i class="fa fa-search"></i></button>
         <input type="text" placeholder="Type word..." name="new_word">
     </form>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="fas fa-plus add"></button>
 </div>
 
-<div id="id01" class="modal">
-    <input type="text" placeholder="Enter word" name="word" required>
-    <nav class="four_words_card">
-        <button><a href="#">Noun</a></button>
-        <button><a href="#">Adjective</a></button>
-        <button><a href="#">Adverb</a></button>
-        <button><a href="#">Verb</a></button>
-    </nav>
-    <p class="description">Description</p>
-    <p class="example">"Example"</p>
-    <p class="translate">Translate</p>
-
-    <div class="container">
-        <button type="submit">+ Add to voabulary</button>
-    </div>
-
-    <div class="container">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-    </div>
-    </form>
-</div>
-
-<script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
 
 {% block content %}
-    <div class="row">
-        {% for four_word in four_words %}
-            <table>
-                <tr>
-                    <th>Nouns</th>
-                    <th>Adjectives</th>
-                    <th>Adverbs</th>
-                    <th>Verbs</th>
-                </tr>
-                <tr>
-                    <td class="column">{{ four_word.noun }}</td>
-                    <td class="column">{{ four_word.adjective }}</td>
-                    <td class="column">{{ four_word.adverb }}</td>
-                    <td class="column">{{ four_word.verb }}</td>
-                </tr>
-            </table>
-        {% endfor %}
-    </div>
 {% endblock content %}
 </body>
 </html>
