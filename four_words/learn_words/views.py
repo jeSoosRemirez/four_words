@@ -1,12 +1,14 @@
-from django.http import HttpResponse
 
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
+from django.views.generic import View
+from django.contrib.auth.models import User
 
 from .models import FourWords
+from .forms import AddNewWord, EditFourWords
 
-from django.views.generic import View
 
-from django.contrib.auth.models import User
 
 class AddWord(View):
 
