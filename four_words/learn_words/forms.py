@@ -12,7 +12,7 @@ WORD_CHOICES = (
 
 class AddNewWord(forms.Form):
     word = forms.CharField(label='Word', max_length=100)
-    word_type = forms.ChoiceField(choices=WORD_CHOICES)
+    word_type = forms.ChoiceField(choices=WORD_CHOICES, widget=forms.Select())
 
 
 class EditFourWords(forms.ModelForm):
