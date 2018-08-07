@@ -13,6 +13,8 @@ WORD_CHOICES = (
 )
 
 
+
+
 class FourWords(models.Model):
     noun = models.CharField(max_length=50, blank=True)
     noun_description = models.TextField(max_length=230, blank=True)
