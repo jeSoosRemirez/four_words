@@ -19,8 +19,17 @@ class AddWord(View):
             word_form = form.save(commit=False)
             word_form.save()
             return redirect('four-words')
-        return render(request, 'add_word.html', {'form': form})
+        return render(request, 'base.html', {'form': form})
 
+def four_words_page(request):
+    search = request.GET.get('search', '')
+    four_words = FourWords.objects.filter(noun__contains=search)
+    return render(request, 'four_words.html', {'four_words': four_words})
+
+
+def word_page(request, word_id):
+    word = get_object_or_404(FourWords, id=word_id)
+    return render(request, 'word_info.html', {'word': word})
 
 def user_words(request, user_id):
     user = get_object_or_404(User, id=user_id)
