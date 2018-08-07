@@ -22,44 +22,37 @@ body {
 	text-decoration: none;
 	font-size: 17px;
 }
-
 .topnav a:hover {
 	background-color: #f4da07;
 	color: black;
 	transition-duration: 0.4s;
 }
-
 .topnav a.vocabulary {
 	background-color: #f4da07;
 	color: black;
 }
-
 .topnav > .add {
+    position: relative;
+    padding: 20px;
     float: right;
     right: 0;
 }
-
 section, footer, header, aside{
 	display: block;
 }
-
 table {
-	font-family: arial, sans-serif;
 	border-collapse: collapse;
 	width: 100%;
 }
-
 td, th {
 	border: 1px solid #dddddd;
 	text-align: left;
 	padding: 8px;
 	width: 25%;
 }
-
 td > a {
 	text-decoration: none;
 	color: black;
-
 }
 tr:nth-child(even) {
 	background-color: #dddddd;
