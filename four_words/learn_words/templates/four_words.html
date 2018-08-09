@@ -23,6 +23,9 @@
                 <td class="column">
                     <a href="{% url 'word-info' four_word.id %}">{{ four_word.verb }}</a>
                 </td>
+                <td class="column">
+                    <a href="{% url 'word-info' four_word.id %}">{{ four_word.other }}</a>
+                </td>
             </tr>
         {% endfor %}
     </table>
