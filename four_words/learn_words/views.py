@@ -148,3 +148,8 @@ def edit_four_words(request, word_id):
         form = EditFourWords(instance=four_words)
     return render(request, 'edit_four_words.html', {'form': form})
 
+def delete_word(request, word_id):
+    word = get_object_or_404(FourWords, pk=word_id)
+    if word:
+        word.delete()
+        return redirect('four-words')
