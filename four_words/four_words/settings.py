@@ -136,3 +136,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'dev_static'),
 )
 AUTH_USER_MODEL = 'accounts.User'
+
+OXFORD_APP_ID = '53419bf6'
+OXFORD_APP_KEY = '56996007826f40db2998d2bc31bdd7a5'
