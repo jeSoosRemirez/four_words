@@ -1,118 +1,14 @@
-body {
-    font-family: "Trebuchet MS", Times, sans-serif;!important;
-	background-color: #ffffff;
-	padding: 0;
-	margin: 0;
+.nav-wrapper{
+	background-color: #333333;
 }
-.logo {
-	color: white;
-	float: left;
-    padding: 0 5px 0 5px;
-	margin: 0;
+.nav-wrapper > ul > li > a:hover{
+	background-color: #f5e200;!important;
+	color: #000000;
 }
-.topnav {
-	overflow: hidden;
-	background-color: #333;
-}
-.topnav a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-}
-.topnav a:hover {
-	background-color: #f4da07;
-	color: black;
-	transition-duration: 0.4s;
-}
-
-.topnav > .add {
-    position: relative;
-    padding: 20px;
-    float: right;
-    right: 0;
-}
-section, footer, header, aside{
-	display: block;
-}
-table {
-	border-collapse: collapse;
-	width: 100%;
-}
-td, th {
-	border: 1px solid #dddddd;
-	text-align: left;
-	padding: 8px;
-	float: left;
-	width: 25%;
-	display: inline-block;
-}
-td > a {
-	text-decoration: none;
-	color: black;
-}
-tr:nth-child(even) {
-	background-color: #dddddd;
-}
-* {
-	box-sizing: border-box;
-}
-form.example input[type=text] {
-    display: block;
-    margin: 0;
-    height: 53px;
-	font-size: 17px;
-	border: 1px solid grey;
-	float: left;
-	width: 79%;
-	background: #f1f1f1;
-}
-form.example button {
-	padding: 0 2px;
-	float: right;
+tr > td{
 	width: 20%;
-	height: 42px;
-	background: white;
-	color: black;
-	font-size: 17px;
-	border: 1px #333333;
-	cursor: pointer;
 }
-form.example button:hover {
-	background: #f4da07;
-	transition-duration: 0.4s;
-
-}
-form.example::after {
-	content: "";
-	clear: both;
-}
-form {
-	float: right;
-}
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #f4da07;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    opacity: 0.8;!important;
+tr > td > a:hover{
+	text-decoration: underline;
+	color: #0000f0;
 }
