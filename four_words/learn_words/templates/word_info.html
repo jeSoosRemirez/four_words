@@ -39,4 +39,5 @@
         </tr>
     </table>
     <a href="{% url 'four-words-edit' word_id=word.pk %}"><span>Edit</span></a>
+    <p><a href="{% url 'four-words-delete' word_id=word.pk %}">Delete</a> </p>
 {% endblock content %}
