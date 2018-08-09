@@ -49,6 +49,9 @@ def new_word(request):
         if form.is_valid():
             word = form.cleaned_data['word']
 
+            translator = Translator()
+            translate = translator.translate(word, dest='uk')
+            translates = translate.text
             author_id = request.user.id
             pub_date = timezone.now()
             url = 'https://od-api.oxforddictionaries.com:443/api/v1/entries/en/{}'.format(word.lower())
