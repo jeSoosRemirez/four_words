@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <table>
+    <table class="highlight">
         <tr>
             <th>Nouns</th>
             <th>Adjectives</th>
             <th>Adverbs</th>
             <th>Verbs</th>
+            <th>Others</th>
         </tr>
         {% for four_word in four_words %}
             <tr>
