@@ -71,6 +71,7 @@ def new_word(request):
                         noun=word,
                         noun_description=word_description,
                         noun_example=word_example,
+                        noun_translate=translates,
                     )
                     four_words.save()
                     return redirect('word-info', word_id=four_words.pk)
@@ -81,6 +82,7 @@ def new_word(request):
                         adjective=word,
                         adjective_description=word_description,
                         adjective_example=word_example,
+                        adjective_translate=translates,
                     )
                     four_words.save()
                     return redirect('word-info', word_id=four_words.pk)
@@ -91,6 +93,7 @@ def new_word(request):
                         adverb=word,
                         adverb_description=word_description,
                         adverb_example=word_example,
+                        adverb_translate=translates,
                     )
                     four_words.save()
                     return redirect('word-info', word_id=four_words.pk)
@@ -101,6 +104,7 @@ def new_word(request):
                         verb=word,
                         verb_description=word_description,
                         verb_example=word_example,
+                        verb_translate=translates,
                     )
                     four_words.save()
                     return redirect('word-info', word_id=four_words.pk)
@@ -111,6 +115,7 @@ def new_word(request):
                         other=word,
                         other_description=word_description,
                         other_example=word_example,
+                        other_translate=translates,
                     )
                     four_words.save()
                     return redirect('word-info', word_id=four_words.pk)
