@@ -8,6 +8,9 @@ from django.contrib.auth.models import User
 from .models import FourWords
 from .forms import AddNewWord, EditFourWords
 
+import requests
+import json
+from django.conf import settings
 
 
 class AddWord(View):
