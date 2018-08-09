@@ -4,33 +4,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="application/javascript" src="{% static 'js/js.js' %}"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script type="application/javascript" src="{% static 'js/materialize.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/vocabulary.css' %}">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
 
     </script>
 </head>
 <body>
-
-<div class="topnav">
-    <h1 class="logo">4Words</h1>
-    <a class="profile" href="#">Profile</a>
-    <a class="vocabulary" href="{% url 'four-words' %}">Vocabulary</a>
-    <a class="training" href="#">Training</a>
-    <a class="help" href="#">Help</a>
-    <a class="" href="{% url 'new-word' %}">Add new word</a>
-
-    {% csrf_token %}
-    <form class="example" action="{% url 'four-words' %}" style="margin:auto; max-width:300px" method="GET">
-        <button type="submit"><i class="fa fa-search"></i></button>
-        <input type="text" placeholder="Type word..." name="new_word">
-    </form>
-</div>
-
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">4Words</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="tab col s3"><a href="{% url 'new-word' %}">Add new word</a></li>
+            <li class="tab col s3"><a href="#">Help</a></li>
+            <li class="tab col s3"><a href="#">Training</a></li>
+            <li class="tab col s3"><a class="active" href="{% url 'four-words' %}">Vocabulary</a></li>
+            <li class="tab col s3"><a href="#">Profile</a></li>
+        </ul>
+    </div>
+</nav>
 
 {% block content %}
 {% endblock content %}
