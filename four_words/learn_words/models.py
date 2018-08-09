@@ -32,6 +32,10 @@ class FourWords(models.Model):
     verb_description = models.TextField(max_length=230, blank=True)
     verb_example = models.TextField(max_length=230, blank=True)
     verb_translate = models.CharField(max_length=50, blank=True)
+    other = models.CharField(max_length=50, blank=True)
+    other_description = models.TextField(max_length=230, blank=True)
+    other_example = models.TextField(max_length=230, blank=True)
+    other_translate = models.CharField(max_length=50, blank=True)
     pub_date = models.DateTimeField('date published')
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
