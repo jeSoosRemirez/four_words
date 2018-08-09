@@ -7,30 +7,35 @@
             <th>Adjectives</th>
             <th>Adverbs</th>
             <th>Verbs</th>
+            <th>Other</th>
         </tr>
         <tr>
             <td class="column">{{ word.noun }}</td>
             <td class="column">{{ word.adjective }}</td>
             <td class="column">{{ word.adverb }}</td>
             <td class="column">{{ word.verb }}</td>
+            <td class="column">{{ word.other }}</td>
         </tr>
         <tr>
             <td class="column">{{ word.noun_description }}</td>
             <td class="column">{{ word.adjective_description }}</td>
             <td class="column">{{ word.adverb_description }}</td>
             <td class="column">{{ word.verb_description }}</td>
+            <td class="column">{{ word.other_description }}</td>
         </tr>
         <tr>
             <td class="column">{{ word.noun_example }}</td>
             <td class="column">{{ word.adjective_example }}</td>
             <td class="column">{{ word.adverb_example }}</td>
             <td class="column">{{ word.verb_example }}</td>
+            <td class="column">{{ word.other_example }}</td>
         </tr>
         <tr>
             <td class="column">{{ word.noun_translate }}</td>
             <td class="column">{{ word.adjective_translate }}</td>
             <td class="column">{{ word.adverb_translate }}</td>
             <td class="column">{{ word.verb_translate }}</td>
+            <td class="column">{{ word.other_translate }}</td>
         </tr>
     </table>
     <a href="{% url 'four-words-edit' word_id=word.pk %}"><span>Edit</span></a>
