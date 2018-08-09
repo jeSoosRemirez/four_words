@@ -1,5 +1,5 @@
 
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.views.generic import View
@@ -13,6 +13,8 @@ import json
 from django.conf import settings
 
 from googletrans import Translator
+
+from django.views.generic.base import View
 
 
 class AddWord(View):
