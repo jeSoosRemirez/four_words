@@ -2,6 +2,7 @@ from django import forms
 
 from .models import FourWords
 
+
 WORD_CHOICES = (
     (1, 'noun'),
     (2, 'adjective'),
