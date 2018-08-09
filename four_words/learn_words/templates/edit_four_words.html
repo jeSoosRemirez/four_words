@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Edit word</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <table>
+                <tr>
+                    <th>Nouns</th>
+                    <th>Adjectives</th>
+                    <th>Adverbs</th>
+                    <th>Verbs</th>
+                </tr>
+                <tr>
+                    <td class="column">{{ form.noun }}</td>
+                    <td class="column">{{ form.adjective }}</td>
+                    <td class="column">{{ form.adverb }}</td>
+                    <td class="column">{{ form.verb }}</td>
+                </tr>
+                <tr>
+                    <td class="column">{{ form.noun_description }}</td>
+                    <td class="column">{{ form.adjective_description }}</td>
+                    <td class="column">{{ form.adverb_description }}</td>
+                    <td class="column">{{ form.verb_description }}</td>
+                </tr>
+                <tr>
+                    <td class="column">{{ form.noun_example }}</td>
+                    <td class="column">{{ form.adjective_example }}</td>
+                    <td class="column">{{ form.adverb_example }}</td>
+                    <td class="column">{{ form.verb_example }}</td>
+                </tr>
+                <tr>
+                    <td class="column">{{ form.noun_translate }}</td>
+                    <td class="column">{{ form.adjective_translate }}</td>
+                    <td class="column">{{ form.adverb_translate }}</td>
+                    <td class="column">{{ form.verb_translate }}</td>
+                </tr>
+            </table>
+        </div>
+        <button class="btn waves-effect" type="submit" name="action">Submit</button>
+    </form>
+{% endblock content %}
