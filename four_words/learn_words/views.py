@@ -12,6 +12,8 @@ import requests
 import json
 from django.conf import settings
 
+from googletrans import Translator
+
 
 class AddWord(View):
 
